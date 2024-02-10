@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Schedule Management</title>
+    <!--  Bootstrap CSS link  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Train Schedule Management</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Train Schedules</h2>
+                <ul id="scheduleList"></ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Add/Edit Train Schedule</h2>
+                <form id="scheduleForm">
+                    <input type="hidden" id="scheduleId">
+                    <div class="form-group">
+                        <label for="trainName">Train Name:</label>
+                        <input type="text" class="form-control" id="trainName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainDate">Date:</label>
+                        <input type="date" class="form-control" id="trainDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainSource">Source:</label>
+                        <input type="text" class="form-control" id="trainSource" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainDest">Destination:</label>
+                        <input type="text" class="form-control" id="trainDest" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Delete Train Schedule</h2>
+                <form id="deleteForm">
+                    <div class="form-group">
+                        <label for="deleteScheduleId">Schedule ID to Delete:</label>
+                        <input type="number" class="form-control" id="deleteScheduleId" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="schedule-script.js"></script>
+</body>
+</html>

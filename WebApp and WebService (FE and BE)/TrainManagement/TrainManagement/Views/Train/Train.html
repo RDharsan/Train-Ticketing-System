@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Management</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Train Management</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Trains</h2>
+                <ul id="trainList"></ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Add/Edit Train</h2>
+                <form id="trainForm">
+                    <input type="hidden" id="trainId">
+                    <div class="form-group">
+                        <label for="trainName">Train Name:</label>
+                        <input type="text" class="form-control" id="trainName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainStatus">Train Status:</label>
+                        <input type="text" class="form-control" id="trainStatus" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Delete Train</h2>
+                <form id="deleteForm">
+                    <div class="form-group">
+                        <label for="deleteTrainId">Train ID to Delete:</label>
+                        <input type="number" class="form-control" id="deleteTrainId" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add your custom JavaScript here -->
+    <script src="script.js"></script>
+</body>
+</html>

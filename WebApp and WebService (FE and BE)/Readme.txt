@@ -1,0 +1,1 @@
+Removed Bin Folder to reduce the file size
